@@ -2100,6 +2100,10 @@ func (r ChatCompletionNewParams) MarshalJSON() (data []byte, err error) {
 	return apijson.MarshalRoot(r)
 }
 
+func (r *ChatCompletionNewParams) UnmarshalJSON(data []byte) (err error) {
+	return apijson.UnmarshalRoot(data, r)
+}
+
 // Deprecated in favor of `tool_choice`.
 //
 // Controls which (if any) function is called by the model.
